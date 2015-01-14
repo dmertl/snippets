@@ -17,3 +17,9 @@ Find line number of first occurrence of "Nov  4" in notificationserver.log
 
     grep -n -m 1 "<search>" <file>
     grep -n -m 1 "Nov  4" notificationserver.log 
+
+### File extension replacement
+
+Replace the file extension using bash string replacement. Removes any existing file extension and appends ".pdf". "%.*" matches strings ending with ".*."
+
+    echo "$1" "${1/%.*/}.pdf"
